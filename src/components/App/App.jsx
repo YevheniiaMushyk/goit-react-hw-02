@@ -17,8 +17,9 @@ function App() {
 		const savedValues = window.localStorage.getItem("saved-values");
 		if (savedValues) {
 			return JSON.parse(savedValues);
+		} else {
+			return feedbackValues;
 		}
-		return feedbackValues;
 	});
 
 	// const updateFeedback = (feedbackType) => {
