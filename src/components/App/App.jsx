@@ -15,7 +15,7 @@ function App() {
 
 	const [values, setValues] = useState(() => {
 		const savedValues = window.localStorage.getItem("saved-values");
-		if (savedValues !== null) {
+		if (savedValues) {
 			return JSON.parse(savedValues);
 		}
 		return feedbackValues;
