@@ -1,0 +1,27 @@
+.listcontainer {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 20px;
+}
+.list {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 10px;
+}
+
+.button {
+	display: block;
+	padding: 5px 10px;
+	border-radius: 30px;
+	background-color: #646cffaa;
+	font-weight: 500;
+	line-height: 1.5;
+	transition-duration: 250ms;
+	transition-timing-function: ease;
+}
+
+.button:hover {
+	background-color: #61dafbaa;
+	transform: scale(1.1);
+}
