@@ -16,15 +16,20 @@ function App() {
 	const [values, setValues] = useState(() => {
 		const savedValues = window.localStorage.getItem("saved-values");
 		if (savedValues !== null) {
-			const fun = JSON.parse(savedValues);
-			console.log(fun);
-			return fun;
+			return JSON.parse(savedValues);
 		}
 		return feedbackValues;
 	});
-	console.log(values);
+
+	// const updateFeedback = (feedbackType) => {
+	// 	setValues({ ...values, [feedbackType]: values[feedbackType] + 1 });
+	// };
+
 	const updateFeedback = (feedbackType) => {
-		setValues({ ...values, [feedbackType]: values[feedbackType] + 1 });
+		setValues((prevState) => ({
+			...prevState,
+			[feedbackType]: prevState[feedbackType] + 1,
+		}));
 	};
 
 	const resetFeedback = () => {
@@ -35,7 +40,7 @@ function App() {
 	const positivFeedback = Math.round(((values.good + values.neutral) / totalFeedback) * 100);
 
 	useEffect(() => {
-		window.localStorage.setItem("saved-values", JSON.stringify({ values }));
+		window.localStorage.setItem("saved-values", JSON.stringify(values));
 	}, [values]);
 
 	return (

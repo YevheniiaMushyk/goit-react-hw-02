@@ -4,23 +4,23 @@ const Options = ({ updateFeedback, totalFeedback, resetFeedback }) => {
 	return (
 		<div className={css.listcontainer}>
 			<ul className={css.list}>
-				<li>
+				<li className={css.listitem}>
 					<button className={css.button} type="button" onClick={() => updateFeedback("good")}>
 						Good
 					</button>
 				</li>
-				<li>
+				<li className={css.listitem}>
 					<button className={css.button} type="button" onClick={() => updateFeedback("neutral")}>
 						Neutral
 					</button>
 				</li>
-				<li>
+				<li className={css.listitem}>
 					<button className={css.button} type="button" onClick={() => updateFeedback("bad")}>
 						Bad
 					</button>
 				</li>
 				{totalFeedback ? (
-					<li>
+					<li className={css.listitem}>
 						<button className={css.button} type="button" onClick={resetFeedback}>
 							Resest
 						</button>

@@ -10,18 +10,27 @@
 	gap: 10px;
 }
 
-.button {
-	display: block;
+.listitem {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	padding: 5px 10px;
 	border-radius: 30px;
 	background-color: #646cffaa;
+}
+
+.button {
 	font-weight: 500;
 	line-height: 1.5;
+	background-color: transparent;
 	transition-duration: 250ms;
 	transition-timing-function: ease;
 }
 
-.button:hover {
+.listitem:hover {
 	background-color: #61dafbaa;
-	transform: scale(1.1);
+	transform: scale(1.2);
 }
