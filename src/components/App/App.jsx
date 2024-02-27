@@ -15,11 +15,7 @@ function App() {
 
 	const [values, setValues] = useState(() => {
 		const savedValues = window.localStorage.getItem("saved-values");
-		if (savedValues) {
-			return JSON.parse(savedValues);
-		} else {
-			return feedbackValues;
-		}
+		return savedValues !== null ? JSON.parse(savedValues) : feedbackValues;
 	});
 
 	// const updateFeedback = (feedbackType) => {
