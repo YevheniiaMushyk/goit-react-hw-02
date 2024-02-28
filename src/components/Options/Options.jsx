@@ -22,7 +22,7 @@ const Options = ({ updateFeedback, totalFeedback, resetFeedback }) => {
 				{totalFeedback ? (
 					<li className={css.listitem}>
 						<button className={css.button} type="button" onClick={resetFeedback}>
-							Resest
+							Reset
 						</button>
 					</li>
 				) : null}
